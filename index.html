@@ -27,6 +27,10 @@
             now         : (new Date()).getTime()/1000
             });
             });
+	    $(document).ready(
+		var firstApp = angular.module("timer", []);
+
+	    );
         </script>
     </head><style type="text/css"></style>
     <body>
@@ -95,7 +99,7 @@
 		<hr><hr>
 			<div ng-app="timer">
 				<table>
-					<tr><td>Year</td><td><input name="year" ng-model="year"></td></tr>
+					<tr><td>Year</td><td><input type="text" name="year" ng-model="year"></td></tr>
 				</table>
 			Expecting to be done with all of this by <date><span>{{dateTime}}</span></date>.
 			 <br/>
