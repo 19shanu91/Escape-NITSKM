@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="assets/jbclock.css" type="text/css" media="all"/>
 		<script src="assets/jquery.min.js"></script>
         <script type="text/javascript" src="assets/jbclock.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 
         <script type="text/javascript">
             $(document).ready(function(){
@@ -92,9 +93,13 @@
 		<div class="quote">
 
 		<hr><hr>
-			Expecting to be done with all of this by <date>2014 June 30, 17:00</date>.
+			<div ng-app="timer">
+				<table>
+					<tr><td>Year</td><td><input name="year" ng-model="year"></td></tr>
+				</table>
+			Expecting to be done with all of this by <date><span>{{dateTime}}</span></date>.
 			 <br/>
-
+			</div>
 			Idea by <a href="https://www.facebook.com/jaseemabid">Jaseem Abid</a>.
 			Code shamelessly copied from
 			<a href="http://www.jbmarket.net/demos/countdown/demo1/index.php">somewhere</a>
