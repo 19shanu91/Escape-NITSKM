@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="assets/jbclock.css" type="text/css" media="all"/>
 		<script src="assets/jquery.min.js"></script>
         <script type="text/javascript" src="assets/jbclock.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 
         <script type="text/javascript">
             $(document).ready(function(){
@@ -92,6 +93,7 @@
 		<div class="quote">
 
 		<hr><hr>
+<<<<<<< .merge_file_gja4kd
 <br/>
 			Expecting to be done with all of this by <date>9th May, 2014 - 0800 hrs</date>.
 			 <br/>
@@ -100,6 +102,16 @@
 			<a href="http://jaseemabid.github.io/Escape-NITC">Page</a>.
 			<br/>
 			
+=======
+			<div ng-app="timer">
+				<table>
+					<tr><td>Year</td><td><input type="text" name="year" ng-model="year"></td></tr>
+				</table>
+			Expecting to be done with all of this by <date><span>{{dateTime}}</span></date>.
+			 <br/>
+			</div>
+			Idea by <a href="https://www.facebook.com/jaseemabid">Jaseem Abid</a>.
+>>>>>>> .merge_file_ZiaOkd
 			Code shamelessly copied from
 			<a href="https://github.com/jaseemabid/Escape-NITC">github</a>. 
 			Idea Copied from  
@@ -112,5 +124,9 @@
 			is on 
 			<a target="_blank" href="https://github.com/19shanu91/Escape-NITSKM">github</a> & <a target="_blank" href="https://www.facebook.com/19shanu91">Facebook</a>.
 		</div>
+<script>
+
+	    var firstApp = angular.module("timer", []);
+</script>
 	</body>
 </html>
