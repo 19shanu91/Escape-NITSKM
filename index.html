@@ -10,9 +10,15 @@
     </head><style type="text/css"></style>
 <script>
 
+	var year=2019;
+	var month=12;
+	var date=12;
 	var firstApp = angular.module("timer", []);
-	function controller1($scope){
-	}
+	firstApp.controller('timerControl');
+	function timerControl($scope){
+		
+
+	} 
 </script>
     <body>
 
@@ -99,8 +105,6 @@
 			<a target="_blank" href="https://github.com/19shanu91/Escape-NITSKM">github</a> & <a target="_blank" href="https://www.facebook.com/19shanu91">Facebook</a>.
 		</div>
         <script type="text/javascript">
-	    var year=2019;
-	    var month=12;
             $(document).ready(function(){
             JBCountDown({
             secondsColor : "#ffdc50",
@@ -116,7 +120,7 @@
             daysGlow     : "none",
             
 	    startDate   : (new Date()).getTime() /1000,
-            endDate     : (new Date()).getTime()+1000 /1000,
+            endDate     : (new Date(year,month,date,0,0,0)).getTime()+1000 /1000,
             now         : (new Date()).getTime()/1000
             });
             });
