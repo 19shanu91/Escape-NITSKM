@@ -7,27 +7,6 @@
         <script type="text/javascript" src="assets/jbclock.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 
-        <script type="text/javascript">
-            $(document).ready(function(){
-            JBCountDown({
-            secondsColor : "#ffdc50",
-            secondsGlow  : "none",
-
-            minutesColor : "#9cdb7d",
-            minutesGlow  : "none",
-
-            hoursColor   : "#378cff",
-            hoursGlow    : "none",
-
-            daysColor    : "#ff6565",
-            daysGlow     : "none",
-
-            startDate   : (new Date(2010,8,10,00,0,0)).getTime() /1000,
-            endDate     : (new Date(2014,4,9,8,0,0)).getTime() /1000,
-            now         : (new Date()).getTime()/1000
-            });
-            });
-        </script>
     </head><style type="text/css"></style>
     <body>
 
@@ -93,14 +72,8 @@
 		<div class="quote">
 
 		<hr><hr>
-			<div ng-app="timer">
+			<div ng-app="timer" ng-controller="controller1">
 				<table>
-					<tr><td>Year</td><td><input type="text" name="year" ng-model="year"></td></tr>
-					<tr><td>Year</td><td><input type="text" name="month" ng-model="month"></td></tr>
-					<tr><td>Year</td><td><input type="text" name="date" ng-model="date"></td></tr>
-					<tr><td>Year</td><td><input type="text" name="hour" ng-model="hour"></td></tr>
-					<tr><td>Year</td><td><input type="text" name="min" ng-model="min"></td></tr>
-					<tr><td>Year</td><td><input type="text" name="sec" ng-model="sec"></td></tr>
 					<tr><td>Year</td><td><input type="datetime-local" name="" ng-model="dateTime"></td></tr>
 				</table>
 				Expecting to be done with all of this by <date><span>{{dateTime}} </span></date>.
@@ -119,9 +92,34 @@
 			is on 
 			<a target="_blank" href="https://github.com/19shanu91/Escape-NITSKM">github</a> & <a target="_blank" href="https://www.facebook.com/19shanu91">Facebook</a>.
 		</div>
+        <script type="text/javascript">
+	    var year=2019;
+	    var month=12
+            $(document).ready(function(){
+            JBCountDown({
+            secondsColor : "#ffdc50",
+            secondsGlow  : "none",
+
+            minutesColor : "#9cdb7d",
+            minutesGlow  : "none",
+
+            hoursColor   : "#378cff",
+            hoursGlow    : "none",
+
+            daysColor    : "#ff6565",
+            daysGlow     : "none",
+            
+	    startDate   : (new Date()).getTime() /1000,
+            endDate     : (new Date()+10000000).getTime() /1000,
+            now         : (new Date()).getTime()/1000
+            });
+            });
+        </script>
 <script>
 
-	    var firstApp = angular.module("timer", []);
+	var firstApp = angular.module("timer", []);
+	function controller1($scope){
+	}
 </script>
 	</body>
 </html>
