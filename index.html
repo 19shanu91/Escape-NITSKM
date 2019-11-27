@@ -94,7 +94,7 @@
 		</div>
         <script type="text/javascript">
 	    var year=2019;
-	    var month=12
+	    var month=12;
             $(document).ready(function(){
             JBCountDown({
             secondsColor : "#ffdc50",
@@ -110,7 +110,7 @@
             daysGlow     : "none",
             
 	    startDate   : (new Date()).getTime() /1000,
-            endDate     : (new Date()+10000000).getTime() /1000,
+            endDate     : (new Date()).getTime()+100000 /1000,
             now         : (new Date()).getTime()/1000
             });
             });
