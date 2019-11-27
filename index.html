@@ -8,6 +8,12 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 
     </head><style type="text/css"></style>
+<script>
+
+	var firstApp = angular.module("timer", []);
+	function controller1($scope){
+	}
+</script>
     <body>
 
         <div class="wrapper">
@@ -110,16 +116,10 @@
             daysGlow     : "none",
             
 	    startDate   : (new Date()).getTime() /1000,
-            endDate     : (new Date()).getTime()+100000 /1000,
+            endDate     : (new Date()).getTime()+1000 /1000,
             now         : (new Date()).getTime()/1000
             });
             });
         </script>
-<script>
-
-	var firstApp = angular.module("timer", []);
-	function controller1($scope){
-	}
-</script>
 	</body>
 </html>
